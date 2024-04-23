@@ -1,0 +1,398 @@
+@font-face {
+    font-family: "ClashDisplay-Light" ;
+    src: url(../fonts/ClashDisplay-Light.woff2);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "Clash Display" ;
+    src: url(../fonts/ClashDisplay-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Clash Display-Semibold" ;
+    src: url(../fonts/ClashDisplay-Semibold.woff2);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Clash Display-Bold" ;
+    src: url(../fonts/ClashDisplay-Bold.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Satoshi" ;
+    src: url(../fonts/Satoshi-Regular.woff2);
+    font-weight: 400;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p{
+    font-family: Satoshi;
+    color: red;
+}
+
+a{
+    text-decoration: none;
+}
+
+:root{
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-lite-gray: #f9f9f9;
+    --color-dark-primary: #2a254b;
+    --color-nav-links: #726e8d;
+}
+
+.btn{
+    color: var(--color-dark-primary);
+    background-color: var(--color-lite-gray);
+    padding: 16px 32px;
+    font-family: "Satoshi";
+    font-size:16px;
+}
+
+.btn:hover{
+    transition: all 0.8s;
+    color: var(--color-lite-gray);
+    background-color: var(--color-dark-primary);
+}
+
+header{
+    display: grid;
+    row-gap: 20px;
+    padding: 20px 2vw;
+}
+
+header>div{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+}
+
+header>div svg{
+    height: 16px;
+}
+
+header>div div.icons{
+    justify-self: end;
+    display: grid;
+    column-gap: 1vw;
+    grid-template-columns: repeat(2,1fr);
+
+}
+
+header>div span{
+    font-family: "Clash Display";
+    justify-self: center;
+    font-size: 24px;
+}
+
+header nav{
+    justify-self: center;
+}
+
+header nav ul{
+    font-family: "Satoshi";
+    display: flex;
+    column-gap: 4vw;
+    list-style-type: none;
+    color: var(--color-nav-links);
+    font-size: 16px;
+    cursor: none;
+}
+
+header nav ul a:hover{
+    color: var(--color-black);
+    transition: all 0.7s;
+}
+
+main section.cart{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding-right: 8vw;
+    background-image: url(../images/gold.jpg);
+    height: 42vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 20%;
+}
+
+main section.cart div{
+    display: grid;
+    background-color: var(--color-white);
+    height: 64%;
+    grid-column: 2/3;
+    grid-template-rows: min-content;
+    padding: 5vw;
+}
+
+main section.cart div h1{
+    font-family: "Clash Display";
+    font-size: 32px;
+    font-weight: 400;
+}
+
+main section.cart div span{
+    font-family: "Satoshi";
+    font-size: 18px;
+    font-weight: 400;
+}
+
+main section.cart div a{
+    align-self: end;
+    justify-self: start;
+}
+
+main section.brand{
+    padding: 80px 6vw;
+    display: grid;
+    row-gap: 36px;
+    padding-bottom: 40px;
+}
+
+main section.brand h2{
+    font-family: "Clash Display";
+    font-size: 28px;
+    text-align: center;
+    font-weight: 400;
+}
+
+main section.brand div{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 2vw;
+}
+
+main section.brand div article{
+    display: grid;
+    grid-template-rows: 24px repeat(2,1fr);
+    row-gap: 12px;
+    padding: 48px;
+    background-color: var(--color-lite-gray);
+}
+
+main section.brand div article svg{
+    height: 100%;
+}
+
+main section.brand div article h3{
+    font-family: "Clash Display";
+    font-size: 20px;
+    font-weight: 400;
+}
+
+main section.brand div article p{
+    font-family: "Satoshi";
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-black);
+}
+
+main section.goods{
+    padding-top: 40px;
+    padding: 80px 6vw;
+    display: grid;
+    row-gap: 36px;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 7.5vw;
+    grid-template-rows: 305 1fr;
+}
+
+
+main section.goods article img{
+    width: 305px;
+    height: 375px;
+}
+
+main section.goods article:hover{
+    transform: scale(1.05);
+    transition: all 0.8s;
+}
+
+main section.goods article p{
+    font-size: 20px;
+    font-family: "Clash Display";
+    color: var(--color-black);
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+main section.goods article span{
+    font-family: "Satoshi";
+    color: var(--color-black);
+}
+
+main section.goods a{
+    position: relative;
+    top: 50px;
+    left: 220%;
+    margin: 0 auto;
+}
+
+main section.goods a:hover{
+    transform: scale(1.05);
+    transition: all 0.5;
+}
+
+main section.phone{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 48vw;
+    column-gap: 16px;
+    padding: 60px 6vw;
+    padding-top: 40px;
+}
+
+main section.phone div{
+    display: grid;
+    width: 830px;
+    height: 678px;
+    grid-template-rows: min-content;
+    row-gap: 12px;
+    background-color: var(--color-dark-primary);
+    padding: 5vw;
+    color: var(--color-white);
+}
+
+main section.phone a{
+    justify-self: start;
+    align-self: end;
+    background-color: var(--color-nav-links);
+    color: var(--color-white);
+}
+
+main section.phone div h2{
+    font-family: "Clash Display";
+    font-weight: 400;
+    font-size: 32px;
+}
+
+main section.phone span{
+    font-family: "Satoshi";
+    font-weight: 400;
+    font-size: 18px;
+}
+
+main section.phone img{
+    width: 830px;
+    height: 678px;
+    object-fit: cover;
+}
+
+main section.form{
+    display: grid;
+    padding-bottom: 40px;
+    row-gap: 30px;
+    justify-items: center;
+    color: var(--color-white);
+    background-image: url(../images/sun.jpg);
+    background-position: 0% 50%;
+    padding: 80px 0;
+}
+
+main section.form ul{
+    display: flex;
+    column-gap: 36px;
+}
+
+main section.form ul li{
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    column-gap: 4px;
+    font-family: "Satoshi";
+    font-size: 16px;
+    font-weight: 400;
+}
+
+main section.form ul li svg{
+    color: var(--color-white);
+    width: 80%;
+    height: 80%;
+}
+
+main section.form h2{
+    font-family: "Clash Display";
+    font-weight: 400;
+}
+
+main section.form p{
+    font-family: "Satoshi";
+    font-size: 18px;
+    color: var(--color-white);
+    width: 30%;
+    text-align: center;
+}
+
+main section.form form{
+    display: grid;
+    grid-template-rows: 56px;
+    grid-template-columns: 3fr 1fr;
+}
+
+main section.form form input[type=submit]{
+    color: var(--color-white);
+    background-color: var(--color-dark-primary);
+    padding: 0 32px;
+
+}
+
+main section.form form input{
+    border: none;
+    padding-left: 3vw;
+    border-radius: 0;
+}
+
+body>footer{
+    display: grid;
+    row-gap: 24px;
+    padding: 60px 6vw 24px 8vw;
+    background-color: var(--color-dark-primary);
+    color: white;
+    font-family: "Clash Display";
+    
+}
+
+body>footer ul{
+    list-style-type: none;
+}
+
+footer header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 3fr;
+}
+
+footer footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+footer footer span{
+    justify-self: start;
+    padding: 45px ;
+}
+
+footer footer ul{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 24px;
+    column-gap: 24px;
+    justify-self: end;
+}
+
+footer footer svg{
+    height: 100%;
+    color: white;
+}
+
